@@ -1,7 +1,8 @@
-````markdown
 # Cypress Setup Guide
 
 This repository contains the basic setup steps to initialize and run **Cypress** for end-to-end testing.
+
+---
 
 ## Prerequisites
 
@@ -49,12 +50,12 @@ npx cypress -y
 
 ---
 
-## Step 4: Open Cypress (Recommended)
+## Step 4: Open Cypress
 
 Launch Cypress Test Runner:
 
 ```bash
-cypress open
+npx cypress open
 ```
 
 ---
@@ -71,10 +72,10 @@ node_modules/.bin/cypress open
 
 ## Project Structure
 
-After opening Cypress for the first time, files will be generated like:
+After opening Cypress for the first time, files will be generated like this:
 
 ```text
-project-folder/
+Js_Cypress/
 │── cypress/
 │   ├── e2e/
 │   ├── fixtures/
@@ -82,6 +83,8 @@ project-folder/
 │── node_modules/
 │── package.json
 │── package-lock.json
+│── cypress.config.js
+│── README.md
 ```
 
 ---
@@ -94,14 +97,23 @@ Run Cypress UI:
 npx cypress open
 ```
 
-Run tests in headless mode:
+Run all tests in headless mode:
 
 ```bash
 npx cypress run
 ```
 
+Run specific test file:
 
-File Upload Plug-in:
+```bash
+npx cypress run --spec cypress/e2e/loginTest.cy.js
+```
+
+---
+
+## File Upload Plugin
+
+Install plugin for file upload testing:
 
 ```bash
 npm install cypress-file-upload
@@ -109,8 +121,23 @@ npm install cypress-file-upload
 
 ---
 
+## Practice Tests Completed
+
+- Login Test
+- Checkbox Test
+- Dropdown Test
+- Input Field Test
+- Button Click Test
+- Alert Handling Test
+- File Upload Test
+- Table Validation Test
+- API Testing
+
+---
+
 ## Tech Stack
 
+- JavaScript
 - Node.js
 - npm
 - Cypress
@@ -118,4 +145,3 @@ npm install cypress-file-upload
 ---
 
 Happy Testing 🚀
-````
