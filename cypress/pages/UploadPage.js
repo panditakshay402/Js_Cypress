@@ -6,7 +6,7 @@ class UploadPage {
 
     uploadFile() {
         cy.get("#file-upload")
-          .selectFile("cypress/fixtures/sample.txt");
+          .selectFile("cypress/fixtures/example.json");
 
         cy.get("#file-submit").click();
     }
