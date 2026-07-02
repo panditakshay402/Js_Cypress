@@ -105,7 +105,7 @@ File Upload Plug-in:
 
 ```bash
 npm install cypress-file-upload
-```bash
+```
 
 ---
 
