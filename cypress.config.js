@@ -1,11 +1,53 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  allowCypressEnv: false,
+
+  reporter: "mochawesome",
+
+  reporterOptions: {
+    reportDir: "reports/mochawesome",
+    overwrite: false,
+    html: true,
+    json: true
+  },
 
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+
+    baseUrl: "https://www.saucedemo.com",
+
+    defaultCommandTimeout: 8000,
+
+    video: false,
+
+    screenshotOnRunFailure: true,
+
+    retries: {
+      runMode: 1,
+      openMode: 0
     },
+
+    specPattern: "cypress/e2e/**/*.cy.js",
+
+    env: {
+    },
+
+    setupNodeEvents(on, config) {
+
+      on("task", {
+
+        logToTerminal(message) {
+          console.log(message);
+          return null;
+        }
+
+      });
+
+    }
+
   },
+
+  blockHosts: [
+    "*.saucedemo.com/service-worker.js"
+  ]
+
 });
