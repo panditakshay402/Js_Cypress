@@ -29,8 +29,6 @@ module.exports = defineConfig({
     specPattern: "cypress/e2e/**/*.cy.js",
 
     env: {
-      username: "standard_user",
-      password: "secret_sauce"
     },
 
     setupNodeEvents(on, config) {
